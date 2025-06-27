@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Your Google Analytics Toolkit</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e0e7ff; /* Soft light blue/lavender - indigo-50 equivalent */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white p-8 rounded-lg shadow-xl max-w-md w-full border border-gray-200 text-center">
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">Your Google Analytics Toolkit Awaits!</h1>
+        
+        <!-- Introduction Section -->
+        <p class="text-gray-700 mb-6 leading-relaxed">
+            Congratulations! You're just one step away from getting your hands on the invaluable Google Analytics toolkit.
+            Click the button below to instantly download your PDF and start transforming your data analysis.
+        </p>
+
+        <button id="downloadButton"
+                class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-6 rounded-md shadow-lg
+                       focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 transition duration-200 ease-in-out
+                       transform hover:scale-105 inline-flex items-center space-x-2">
+            <!-- Download icon using inline SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" x2="12" y1="15" y2="3"/>
+            </svg>
+            <span>Download Toolkit</span>
+        </button>
+
+        <!-- Notes Section -->
+        <div class="mt-8 pt-6 border-t border-gray-200 text-sm text-gray-500">
+            <p class="font-semibold mb-2">Quick Reminders:</p>
+            <ul class="list-disc list-inside space-y-1">
+                <li>The PDF will open in a new browser tab.</li>
+                <li>Ensure your pop-up blocker is temporarily disabled if you encounter issues.</li>
+                <li>You'll be redirected to a thank you page after clicking.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('downloadButton').addEventListener('click', function() {
+            // --- Event Tracking: Event 3 (Click on "Download" button) ---
+            console.log("Event 3: Click on 'Download Toolkit' button");
+
+            // Open the PDF in a new tab/window
+            window.open('https://niopa.qub.ac.uk/bitstream/NIOPA/13759/1/google-analytics-online-toolkit%283%29.pdf', '_blank');
+
+            // Redirect to the thank you page
+            window.location.href = 'thankyou.html';
+        });
+    </script>
+</body>
+</html>
