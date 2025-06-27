@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Analytics Resource - Landing Page</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e0e7ff; /* Soft light blue/lavender - indigo-50 equivalent */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white p-8 rounded-lg shadow-xl max-w-md w-full border border-gray-200">
+        <h1 class="text-3xl font-bold text-gray-800 mb-4 text-center">Mastering Google Analytics: Your Free Toolkit</h1>
+        
+        <!-- Introduction Section -->
+        <p class="text-gray-700 mb-6 text-center leading-relaxed">
+            Welcome! Dive into the world of data-driven decision-making with our comprehensive Google Analytics Toolkit.
+            Learn how to track website performance, understand user behavior, and optimize your digital strategy.
+            This toolkit is designed for both beginners and experienced marketers looking to unlock the full potential of their data.
+        </p>
+
+        <form id="resourceForm" class="space-y-4">
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required
+                       class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm transition duration-200 ease-in-out">
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
+                       class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 sm:text-sm transition duration-200 ease-in-out">
+            </div>
+            <button type="submit"
+                    class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-md shadow-md
+                           focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition duration-200 ease-in-out
+                           transform hover:scale-105">
+                Access Toolkit Now
+            </button>
+        </form>
+
+        <!-- Notes Section -->
+        <div class="mt-8 pt-6 border-t border-gray-200 text-sm text-gray-500">
+            <p class="font-semibold mb-2">Important Notes:</p>
+            <ul class="list-disc list-inside space-y-1">
+                <li>Your data is safe with us and will not be shared with third parties.</li>
+                <li>You'll receive an email with additional analytics tips.</li>
+                <li>Please check your spam folder if the download doesn't appear immediately.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // --- Event Tracking: Event 1 (Page View on Landing Page) ---
+        console.log("Event 1: Page View on Google Analytics Landing Page (index.html)");
+
+        document.getElementById('resourceForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form data (for demonstration purposes, you might send this to a backend)
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            // --- Event Tracking: Event 2 (Form Submission / Lead Generation) ---
+            console.log(`Event 2: Form Submission (Lead Generated) - Name: ${name}, Email: ${email}`);
+
+            // Redirect to the download page
+            window.location.href = 'download.html';
+        });
+    </script>
+</body>
+</html>
